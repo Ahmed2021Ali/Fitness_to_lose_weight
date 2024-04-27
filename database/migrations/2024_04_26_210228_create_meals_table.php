@@ -12,15 +12,16 @@ return new class extends Migration
         Schema::create('meals', function (Blueprint $table) {
             $table->id();
             $table->string('day');
-            $table->string('fasting_status');
-            $table->string('quantity_of_Water');
-            $table->string('breakfast_meal');
-            $table->string('breakfast_time');
-            $table->string('lunch_meal');
-            $table->string('lunch_time');
-            $table->string('dinner_meal');
-            $table->string('dinner_time');
-            $table->foreignId('plan_id')->references('id')->on('plans')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('fasting_status')->nullable();
+            $table->string('quantity_of_Water')->nullable();
+            $table->string('breakfast_meal')->nullable();
+            $table->string('breakfast_time')->nullable();
+            $table->string('lunch_meal')->nullable();
+            $table->string('lunch_time')->nullable();
+            $table->string('dinner_meal')->nullable();
+            $table->string('dinner_time')->nullable();
+            $table->string('plan_id');
+            //$table->foreignId('plan_id')->references('id')->on('plans')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

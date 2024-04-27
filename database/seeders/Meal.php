@@ -14,9 +14,7 @@ class Meal extends Seeder
         DB::table('plans')->delete();
         $meals = [
             [
-                'name' => 'Difficult',
-                'age' => '18-24',
-                'fasting_system' =>'Alternate Day Fasting (ADF)',
+
                 'day' => 'Saturday',
                 'fasting_status' => 'Breacking Fast',
                 'quantity_of_Water' => 'At least 8 glasses (2 liters)',
@@ -26,7 +24,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Baked salmon with quinoa and steamed broccoli',
                 'dinner_time' => '6:30 PM',
-                'plan_id'=> ''  // plan_id
+                'plan_id'=> 1  // plan_id
             ],  //1
 
             [
@@ -39,6 +37,7 @@ class Meal extends Seeder
                 'lunch_time' => '',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id'=> 1  // plan_id
             ],  //2
             [
                 'day' => 'Monday',
@@ -50,6 +49,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Stir-fried tofu with mixed vegetables and brown rice',
                 'dinner_time' => '6:30 PM',
+                'plan_id'=> 1  // plan_id
             ],  //3
             [
                 'day' => 'Tuesday',
@@ -61,6 +61,7 @@ class Meal extends Seeder
                 'lunch_time' => '',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id'=> 1  // plan_id
             ],  //4
             [
                 'day' => 'Wednesday',
@@ -72,6 +73,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Grilled shrimp with roasted sweet potatoes and asparagus',
                 'dinner_time' => '6:30 PM',
+                'plan_id'=> 1  // plan_id
             ], //5
             [
                 'day' => 'Thursday',
@@ -83,6 +85,7 @@ class Meal extends Seeder
                 'lunch_time' => '',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id'=> 1  // plan_id
             ], //6
             [
                 'day' => 'Friday',
@@ -94,6 +97,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Grilled chicken breast with roasted vegetables and couscous',
                 'dinner_time' => '6:30 PM',
+                'plan_id'=> 1  // plan_id
             ], //7
             [
                 'day' => 'Saturday',
@@ -105,6 +109,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Baked salmon with quinoa and broccoli',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ], //8
             [
                 'day' => 'Sunday',
@@ -116,6 +121,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Turkey chili with whole grain bread',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//9
             [
                 'day' => 'Monday',
@@ -127,6 +133,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Grilled tofu with brown rice and steamed vegetables',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//10
             [
                 'day' => 'Tuesday',
@@ -138,6 +145,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Grilled shrimp with quinoa salad',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//11
             [
                 'day' => 'Wednesday',
@@ -149,6 +157,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Teriyaki chicken with roasted sweet potatoes and green beans',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//12
             [
                 'day' => 'Thursday',
@@ -160,6 +169,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Grilled steak with roasted potatoes and asparagus',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//13
             [
                 'day' => 'Friday',
@@ -171,6 +181,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Baked chicken with quinoa and sautéed spinach',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 2
             ],//14
             [
                 'day' => 'Saturday',
@@ -182,6 +193,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],//15
             [
                 'day' => 'Sunday',
@@ -193,6 +205,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],//16
             [
                 'day' => 'Monday',
@@ -204,6 +217,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],//17
             [
                 'day' => 'Tuesday',
@@ -215,6 +229,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],
             [
                 'day' => 'Wednesday',
@@ -226,6 +241,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],
             [
                 'day' => 'Thursday',
@@ -237,6 +253,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],
             [
                 'day' => 'Friday',
@@ -248,6 +265,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 pm',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 3
             ],
             [
                 'day' => 'Saturday',
@@ -259,6 +277,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Baked salmon with roasted vegetables and quinoa',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Sunday',
@@ -270,6 +289,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Vegetable stir-fry with tofu or tempeh over brown rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Monday',
@@ -281,6 +301,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Grilled shrimp with quinoa salad',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Tuesday',
@@ -292,6 +313,7 @@ class Meal extends Seeder
                 'lunch_time'=> '3:00 PM',
                 'dinner_meal' => 'Teriyaki chicken with sweet potatoes and green beans',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Wednesday',
@@ -303,6 +325,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Baked cod with asparagus and wild rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Thursday',
@@ -314,6 +337,7 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Stir-fried beef with mixed vegetables and brown rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Friday',
@@ -325,17 +349,19 @@ class Meal extends Seeder
                 'lunch_time' => '3:00 PM',
                 'dinner_meal' => 'Quinoa-stuffed bell peppers with side salad',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 4
             ],
             [
                 'day' => 'Saturday',
                 'fasting_status' => 'Breaking fast',
                 'quantity_of_Water' => '3-4 liters',
-                'breakfast_meal' => 'Whole grain pancakes with berries and a drizzle of hone',
+                'breakfast_meal' => 'Whole grain pancakes with berries and a drizzle of honey',
                 'breakfast_time' => '8:00 AM',
                 'lunch_meal' => 'Caprese salad with fresh mozzarella, tomatoes, and basil',
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Grilled steak with roasted potatoes and mixed vegetables',
                 'dinner_time' => '6:30 PM',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Sunday',
@@ -347,6 +373,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Baked cod with steamed asparagus and wild rice',
                 'dinner_time' => '6:30 PM',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Monday',
@@ -358,6 +385,7 @@ class Meal extends Seeder
                 'lunch_time' => '7:00 PM',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Tuesday',
@@ -369,6 +397,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Stir-fried tofu with mixed vegetables and brown rice',
                 'dinner_time' => '6:30 PM',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Wednesday',
@@ -380,6 +409,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Vegetable stir-fry with tofu or tempeh served over brown rice',
                 'dinner_time' => '6:30 PM',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Thursday',
@@ -391,6 +421,7 @@ class Meal extends Seeder
                 'lunch_time' => '7:00 PM',
                 'dinner_meal' => '',
                 'dinner_time' => '',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Friday',
@@ -402,6 +433,7 @@ class Meal extends Seeder
                 'lunch_time' => '12:30 PM',
                 'dinner_meal' => 'Baked chicken breast with roasted sweet potatoes and green beans',
                 'dinner_time' => '6:30 PM',
+                'plan_id' => 5
             ],
             [
                 'day' => 'Saturday',
@@ -413,6 +445,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Baked salmon with quinoa and steamed broccoli',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
             [
                 'day' => 'Sunday',
@@ -424,6 +457,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Stir-fried tofu with mixed vegetables and brown rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
             [
                 'day' => 'Monday',
@@ -435,6 +469,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Grilled steak with roasted sweet potatoes and asparagus',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
             [
                 'day' => 'Tuesday',
@@ -446,6 +481,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Veggie stir-fry with tofu served over quinoa',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
             [
                 'day' => 'Wednesday',
@@ -457,6 +493,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Grilled shrimp with roasted vegetables and couscous',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => '6'
             ],
             [
                 'day' => 'Thursday',
@@ -468,6 +505,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Vegetable curry with tofu served over brown rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
             [
                 'day' => 'Friday',
@@ -479,6 +517,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Baked cod with roasted Brussels sprouts and wild rice',
                 'dinner_time' => '6:00 PM',
+                'plan_id' => 6
             ],
         ];
         foreach ($meals as $meal) {

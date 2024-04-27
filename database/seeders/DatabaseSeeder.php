@@ -21,8 +21,7 @@ class DatabaseSeeder extends Seeder
             Answer::class,
             Info::class,
             Plan::class,
-            meal::class
-
+           Meal::class
         ]);
     }
 }
