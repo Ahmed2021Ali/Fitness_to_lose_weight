@@ -12,6 +12,6 @@ class Question extends Model
     protected $fillable = ['question'];
     public function answers()
     {
-        return $this->hasOne(Answer::class,'question_id');
+        return $this->hasMany(Answer::class,'question_id');
     }
 }

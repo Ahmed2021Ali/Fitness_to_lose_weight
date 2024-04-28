@@ -26,7 +26,7 @@ Route::controller(\App\Http\Controllers\AuthenticationController::class)->group(
 
 ///////////////////////////////////  Question Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\QuestionController::class)->group(function () {
-    Route::middleware('auth:sanctum')->prefix('question')->group(function () {
+    Route::prefix('question')->group(function () {
         Route::get('/show', 'show');
     });
 });
