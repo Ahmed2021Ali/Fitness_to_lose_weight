@@ -20,6 +20,8 @@ class InfoController extends Controller
             $user->update(['height' => $request['height']]);
         } elseif ($request['age'] && $request['age'] !== null) {
             $user->update(['age' => $request['age']]);
+        } elseif ($request['diseases'] && $request['diseases'] !== null) {
+            $user->update(['diseases' => $request['diseases']]);
         } else {
             if ($request['answer_id'] && $request['question_id'] && isset($request['question_id']) !== null && isset($request['answer_id']) !== null) {
                 // receive id only

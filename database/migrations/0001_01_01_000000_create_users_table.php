@@ -17,9 +17,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('age')->nullable();
             $table->string('height')->nullable();
             $table->string('weight')->nullable();
-            $table->string('age')->nullable();
+            $table->string('diseases')->nullable();
             $table->boolean('status')->default(0);
             $table->foreignId('user_id')->nullable()->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
             $table->rememberToken();

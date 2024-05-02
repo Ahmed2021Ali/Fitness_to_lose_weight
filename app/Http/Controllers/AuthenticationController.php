@@ -44,7 +44,10 @@ class AuthenticationController extends Controller
     public function update(UpdateUserRequest $request)
     {
         $user = $request->user();
-        $user->update(Arr::except($request->validated(), 'file'));
+        $user->update([$request->validated(),
+            'height'=>$request->height, 'weight'=>$request->weight,
+            'diseases'=>$request->diseases, 'age'=>$request->age
+            ]);
         return response()->json(['status' => true, 'message' => 'User Update Successfully',
             'user' => new UserResource($user)], 200);
     }

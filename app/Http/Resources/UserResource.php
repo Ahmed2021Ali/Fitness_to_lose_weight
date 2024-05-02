@@ -12,6 +12,10 @@ class UserResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'age' => $this->age,
+            'height' => $this->height,
+            'weight' => $this->weight,
+            'diseases' => $this->diseases,
             'info' => InfoResource::collection($this->info),
         ];
     }

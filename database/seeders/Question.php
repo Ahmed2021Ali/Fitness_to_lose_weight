@@ -13,21 +13,25 @@ class Question extends Seeder
     {
         DB::table('questions')->delete();
         $questions = [
-            ['question' => 'What is your age'],  //1
-            ['question' => 'what is your goal'], //2
-            ['question' => 'what is your body type'],//3
-            ['question' => 'what is the body you want'],//4
-            ['question' => 'what is your target zone'],//5
-            ['question' => 'what is takes up most of your time'],//6
-            ['question' => 'when was the last time you were content with your body weight'],//7
-            ['question' => 'Do you workout'],//8
-            ['question' => 'how tired do you typically feel during the day'],//9
-            ['question' => 'select all that you tend to do'],//10
-            ['question' => 'how much do you usually sleep '],//11
-            ['question' => 'how much water do you drink daily '],//12
-            ['question' => 'choose the product you like '],//13
-            ['question' => 'Do you follow any of these diets'],//14
-            ['question' => 'IS there a special occasion you want to lose weight for'],//15
+            ['question' => 'According To Your Age?'],
+            ['question' => 'Do You Have Diabetes? '],
+            ['question' => 'Chose your goal please select your main? '],
+            ['question' => 'Chose your body type?'],
+            ['question' => 'Chose your body you want? '],
+            ['question' => 'Chose your target zones?'],
+            ['question' => 'How do you typically spend your day?'],
+            ['question' => 'When was the last time you were content with your body weight ?'],
+            ['question' => 'Do you workout?'],
+            ['question' => 'How tired do you typically feel during the day?'],
+            ['question' => 'Select all that you tend to do'],
+            ['question' => 'How much do you usually sleep?   '],
+            ['question' => 'How much water do you drink daily? '],
+            ['question' => 'Is there a special occasion you want to lose weight for? '],
+            ['question' => 'How often would you rate your relationship with food as good or excellent?  '],
+            ['question' => 'How long have you been working towards your weight loss goals? '],
+            ['question' => 'When do you usually have your first meal?  '],
+            ['question' => 'When do you usually have your last meal? '],
+            ['question' => 'How often do you usually eat during the day? '],
         ];
         foreach ($questions as $questions) {
             \App\Models\Question::create($questions);
