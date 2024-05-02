@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\InfoRequest;
+use App\Http\Resources\InfoUsers;
 use App\Http\Resources\UserResource;
 use App\Models\Info;
 use App\Models\User;
@@ -49,6 +50,6 @@ class InfoController extends Controller
     public function showAllInfo()
     {
         $users = User::all();
-        return response()->json(['status' => true, 'users' => UserResource::collection($users)]);
+        return response()->json(['status' => true, 'users' => InfoUsers::collection($users)]);
     }
 }

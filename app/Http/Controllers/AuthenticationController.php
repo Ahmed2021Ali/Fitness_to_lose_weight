@@ -44,7 +44,7 @@ class AuthenticationController extends Controller
     public function update(UpdateUserRequest $request)
     {
         $user = $request->user();
-        $user->update([$request->validated(),
+        $user->update(['name'=>$request->name,'email'=>$request->email,
             'height'=>$request->height, 'weight'=>$request->weight,
             'diseases'=>$request->diseases, 'age'=>$request->age
             ]);

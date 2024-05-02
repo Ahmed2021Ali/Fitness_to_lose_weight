@@ -55,6 +55,8 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
 
 ///////////////////////////////////  Plan Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\PlanController::class)->group(function () {
+    Route::post('/store/plan', 'storePlan');
+
     Route::middleware('auth:sanctum')->prefix('plan')->group(function () {
         Route::get('/show', 'show');
         Route::get('/store/{id}', 'store');
