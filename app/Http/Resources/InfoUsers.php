@@ -12,6 +12,10 @@ class InfoUsers extends JsonResource
     {
         return [
             'id' => $this->id,
+            'age' => $this->age,
+            'height' => $this->height,
+            'weight' => $this->weight,
+            'diseases' => $this->diseases,
             'info' => InfoResource::collection($this->info),
         ];
     }

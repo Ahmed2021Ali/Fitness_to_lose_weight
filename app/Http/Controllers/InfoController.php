@@ -17,31 +17,33 @@ class InfoController extends Controller
         $user = $request->user();
         if ($request['weight'] && $request['weight'] !== null) {
             $user->update(['weight' => $request['weight']]);
-        } elseif ($request['height'] && $request['height'] !== null) {
+        }
+        if ($request['height'] && $request['height'] !== null) {
             $user->update(['height' => $request['height']]);
-        } elseif ($request['age'] && $request['age'] !== null) {
+        }
+        if ($request['age'] && $request['age'] !== null) {
             $user->update(['age' => $request['age']]);
-        } elseif ($request['diseases'] && $request['diseases'] !== null) {
+        }
+        if ($request['diseases'] && $request['diseases'] !== null) {
             $user->update(['diseases' => $request['diseases']]);
-        } else {
-            if ($request['answer_id'] && $request['question_id'] && isset($request['question_id']) !== null && isset($request['answer_id']) !== null) {
-                // receive id only
-                $info_exist = Info::where('answer_id', $request['answer_id'])->where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
-                if (!$info_exist) {
-                    Info::create([
-                        'user_id' => $user->id, 'question_id' => $request['question_id'],
-                        'answer_id' => $request['answer_id'],
-                    ]);
-                } else {
-                    $info_exist->update([
-                        'user_id' => $user->id, 'question_id' => $request['question_id'],
-                        'answer_id' => $request['answer_id'],
-                    ]);
-                    return response()->json(['status' => true, 'questions' => 'The selection has been updated successfully']);
-                }
+        }
+        if ($request['answer_id'] && $request['question_id'] && isset($request['question_id']) !== null && isset($request['answer_id']) !== null) {
+            // receive id only
+            $info_exist = Info::where('answer_id', $request['answer_id'])->where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
+            if (!$info_exist) {
+                Info::create([
+                    'user_id' => $user->id, 'question_id' => $request['question_id'],
+                    'answer_id' => $request['answer_id'],
+                ]);
             } else {
-                return response()->json(['status' => false, 'questions' => 'must be enter question id and answer id OR Weight OR Height']);
+                $info_exist->update([
+                    'user_id' => $user->id, 'question_id' => $request['question_id'],
+                    'answer_id' => $request['answer_id'],
+                ]);
+                return response()->json(['status' => true, 'questions' => 'The selection has been updated successfully']);
             }
+        } else {
+            return response()->json(['status' => false, 'questions' => 'must be enter question id and answer id OR Weight OR Height']);
         }
         return response()->json(['true' => true, 'questions' => 'Continue answering questions to create the best diet']);
     }
