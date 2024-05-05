@@ -17,8 +17,12 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             'name' => ['nullable', 'string', 'max:255'],
+            'age' => ['nullable', 'string', 'max:255'],
+            'height' => ['nullable', 'string', 'max:255'],
+            'weight' => ['nullable', 'string', 'max:255'],
+            'diseases' => ['nullable', 'string', 'max:255'],
             'email' => ['nullable','email',Rule::unique('users','email')->ignore($this->user()->id, 'id')],
-            'password' => ['nullable', 'confirmed'],
+            'password' => ['nullable','min:8', 'confirmed'],
         ];
     }
 }

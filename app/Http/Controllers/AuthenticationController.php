@@ -44,12 +44,8 @@ class AuthenticationController extends Controller
     public function update(UpdateUserRequest $request)
     {
         $user = $request->user();
-        $user->update(['name'=>$request->name,'email'=>$request->email,
-            'height'=>$request->height, 'weight'=>$request->weight,
-            'diseases'=>$request->diseases, 'age'=>$request->age
-            ]);
-        return response()->json(['status' => true, 'message' => 'User Update Successfully',
-            'user' => new UserResource($user)], 200);
+        $user->update($request->validated());
+        return response()->json(['message' => 'User Update Successfully','user' => new UserResource($user)], 200);
     }
 
 
@@ -64,8 +60,8 @@ class AuthenticationController extends Controller
     public function logoutAllDevice(Request $request)
     {
         $brearWithId = explode('|', $request->header('Authorization'))[0];
-        $tokenId= explode(' ',$brearWithId)[1];
-        Auth::user()->tokens()->where('id',$tokenId)->delete();
+        $tokenId = explode(' ', $brearWithId)[1];
+        Auth::user()->tokens()->where('id', $tokenId)->delete();
         return response()->json(['status' => true, 'message' => 'user log out all device login it',]);
     }
 
