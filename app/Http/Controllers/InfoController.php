@@ -6,6 +6,7 @@ use App\Http\Requests\InfoRequest;
 use App\Http\Resources\InfoUsers;
 use App\Http\Resources\UserResource;
 use App\Models\Info;
+use App\Models\Question;
 use App\Models\User;
 
 class InfoController extends Controller
@@ -31,6 +32,14 @@ class InfoController extends Controller
             // receive id only
             $info_exist = Info::where('answer_id', $request['answer_id'])->where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
             if (!$info_exist) {
+/*                $question=Question::find($request['question_id']);
+                foreach ($question->answers2->toArray() as $array) {
+                    $result = $array;
+                }
+                dd($result);
+                $aa=in_array($request['answer_id'], $question->answers2->toArray());
+
+                dd($aa);*/
                 Info::create([
                     'user_id' => $user->id, 'question_id' => $request['question_id'],
                     'answer_id' => $request['answer_id'],

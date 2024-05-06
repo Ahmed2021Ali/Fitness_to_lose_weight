@@ -56,20 +56,18 @@ class AuthenticationController extends Controller
         return response()->json(['status' => true, 'message' => 'user logged out',]);
     }
 
-    /* Log out Account all Device  */
-    public function logoutAllDevice(Request $request)
-    {
-        $brearWithId = explode('|', $request->header('Authorization'))[0];
-        $tokenId = explode(' ', $brearWithId)[1];
-        Auth::user()->tokens()->where('id', $tokenId)->delete();
-        return response()->json(['status' => true, 'message' => 'user log out all device login it',]);
-    }
 
     /* delete Account */
     public function delete(Request $request)
     {
         $request->user()->delete();
         return response()->json(['status' => true, 'message' => 'delete account successfully'], 201);
+    }
+    public function getUser(Request $request)
+    {
+        $user=$request->user();
+       // dd($user);
+        return response()->json(['message' => 'User Update Successfully','user' => new UserResource($user)], 200);
     }
 
 }

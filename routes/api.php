@@ -19,9 +19,10 @@ Route::controller(\App\Http\Controllers\AuthenticationController::class)->group(
     Route::middleware('auth:sanctum')->prefix('user')->group(function () {
         Route::PUT('/update', 'update');
         Route::get('/logout', 'logout');
-        Route::get('/logoutAllDevice', 'logoutAllDevice');
         Route::delete('/delete', 'delete');
+        Route::get('/getUser', 'getUser');
     });
+    // https://fast.alsafwa1.com/api/user/getUser
 });
 ///////////////////////////////////   End Authentication Route ///////////////////////////////////
 
