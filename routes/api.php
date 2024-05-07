@@ -38,6 +38,7 @@ Route::controller(\App\Http\Controllers\QuestionController::class)->group(functi
 
 ///////////////////////////////////  Info Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\InfoController::class)->group(function () {
+    // eng.Mohamed Samy
     Route::get('/showAllInfo', 'showAllInfo');
     Route::middleware('auth:sanctum')->prefix('info')->group(function () {
         Route::post('/store', 'store');
@@ -51,7 +52,7 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
     Route::get('/getAllUser', 'getAllUser');
     Route::middleware('auth:sanctum')->prefix('user')->group(function () {
         Route::get('/info', 'info');
-        // Route::get('/plan', 'plan');
+         Route::get('/plan', 'plan');
     });
 });
 ///////////////////////////////////   End User Route ///////////////////////////////////
@@ -59,19 +60,12 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
 
 ///////////////////////////////////  Plan Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\PlanController::class)->group(function () {
-    Route::post('/store/plan', 'storePlan');
-    Route::middleware('auth:sanctum')->prefix('plan')->group(function () {
-        Route::get('/show', 'show');
+    // eng.Mohamed Samy
+    Route::get('/store/plan', 'storePlan');
+    Route::middleware('auth:sanctum')->prefix('plans')->group(function () {
+       Route::get('/show', 'show');
         Route::get('/store/{id}', 'store');
     });
 });
 ///////////////////////////////////   End Plan Route ///////////////////////////////////
 
-
-///////////////////////////////////  Meal Route ///////////////////////////////////
-Route::controller(\App\Http\Controllers\MealController::class)->group(function () {
-    Route::middleware('auth:sanctum')->prefix('meal')->group(function () {
-        Route::get('/show', 'show');
-    });
-});
-///////////////////////////////////   End Meal Route ///////////////////////////////////

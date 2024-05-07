@@ -31,15 +31,10 @@ class PlanController extends Controller
         if ($plan) {
             $user = $request->user();
             $user->update(['plan_id' => $plan->id]);
-            return response()->json(['status' => true, 'message' => 'The plan was registered bin']);
+            return response()->json(['status' => true, 'message' => 'The plan was registered', 'plan' => new PlanResource($plan)]);
         } else {
             return response()->json(['status' => false, 'message' => 'The plan does not exist']);
         }
-    }
-
-    public function storePlan(Request $request)
-    {
-        dd($request->all());
     }
 
 }

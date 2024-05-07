@@ -10,7 +10,7 @@ class MealController extends Controller
     {
         $user = $request->user();
         if ($user->plan_id) {
-            return response()->json(['status' => true, 'meals' => $user->plan->meals]);
+            return response()->json(['status' => true, 'meals' => $user->meela]);
         } else {
             return response()->json(['status' => false, 'message' => 'The meal does not exist']);
         }

@@ -16,11 +16,11 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call([
+            Plan::class,
             \Database\Seeders\User::class,
             Question::class,
             Answer::class,
             Info::class,
-            Plan::class,
            Meal::class
         ]);
     }

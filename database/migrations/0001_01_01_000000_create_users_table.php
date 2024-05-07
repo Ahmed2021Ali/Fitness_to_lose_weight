@@ -22,7 +22,9 @@ return new class extends Migration
             $table->string('weight')->nullable();
             $table->string('diseases')->nullable();
             $table->boolean('status')->default(0);
-            $table->foreignId('user_id')->nullable()->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->string('plan_id')->nullable();
+
+            //   $table->foreignId('plan_id')->nullable()->references('id')->on('plans')->cascadeOnUpdate()->cascadeOnDelete();
             $table->rememberToken();
             $table->timestamps();
         });

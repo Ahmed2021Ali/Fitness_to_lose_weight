@@ -30,25 +30,14 @@ class InfoController extends Controller
         }
         if ($request['answer_id'] && $request['question_id'] && isset($request['question_id']) !== null && isset($request['answer_id']) !== null) {
             // receive id only
-            $info_exist = Info::where('answer_id', $request['answer_id'])->where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
+            $info_exist = Info::where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
             if (!$info_exist) {
-/*                $question=Question::find($request['question_id']);
-                foreach ($question->answers2->toArray() as $array) {
-                    $result = $array;
-                }
-                dd($result);
-                $aa=in_array($request['answer_id'], $question->answers2->toArray());
-
-                dd($aa);*/
                 Info::create([
                     'user_id' => $user->id, 'question_id' => $request['question_id'],
                     'answer_id' => $request['answer_id'],
                 ]);
             } else {
-                $info_exist->update([
-                    'user_id' => $user->id, 'question_id' => $request['question_id'],
-                    'answer_id' => $request['answer_id'],
-                ]);
+                $info_exist->update(['answer_id' => $request['answer_id']]);
                 return response()->json(['status' => true, 'questions' => 'The selection has been updated successfully']);
             }
         } else {
