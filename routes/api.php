@@ -60,8 +60,6 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
 
 ///////////////////////////////////  Plan Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\PlanController::class)->group(function () {
-    // eng.Mohamed Samy
-    Route::get('/store/plan', 'storePlan');
     Route::middleware('auth:sanctum')->prefix('plans')->group(function () {
        Route::get('/show', 'show');
         Route::get('/store/{id}', 'store');
@@ -69,3 +67,11 @@ Route::controller(\App\Http\Controllers\PlanController::class)->group(function (
 });
 ///////////////////////////////////   End Plan Route ///////////////////////////////////
 
+
+///////////////////////////////////  Process Route ///////////////////////////////////
+Route::controller(\App\Http\Controllers\ProcessController::class)->group(function () {
+    Route::middleware('auth:sanctum')->prefix('process')->group(function () {
+
+    });
+});
+///////////////////////////////////   End Process Route ///////////////////////////////////
