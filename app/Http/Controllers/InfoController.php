@@ -33,8 +33,7 @@ class InfoController extends Controller
             $info_exist = Info::where('question_id', $request['question_id'])->where('user_id', $user->id)->first();
             if (!$info_exist) {
                 Info::create([
-                    'user_id' => $user->id, 'question_id' => $request['question_id'],
-                    'answer_id' => $request['answer_id'],
+                    'user_id' => $user->id, 'question_id' => $request['question_id'], 'answer_id' => $request['answer_id'],
                 ]);
             } else {
                 $info_exist->update(['answer_id' => $request['answer_id']]);

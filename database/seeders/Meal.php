@@ -11,7 +11,7 @@ class Meal extends Seeder
 
     public function run(): void
     {
-        DB::table('plans')->delete();
+        DB::table('meals')->delete();
         $meals = [
             [
 
@@ -493,7 +493,7 @@ class Meal extends Seeder
                 'lunch_time' => '1:00 PM',
                 'dinner_meal' => 'Grilled shrimp with roasted vegetables and couscous',
                 'dinner_time' => '6:00 PM',
-                'plan_id' => '6'
+                'plan_id' => 6
             ],
             [
                 'day' => 'Thursday',
@@ -518,6 +518,176 @@ class Meal extends Seeder
                 'dinner_meal' => 'Baked cod with roasted Brussels sprouts and wild rice',
                 'dinner_time' => '6:00 PM',
                 'plan_id' => 6
+            ],
+            [
+
+                'day' => 'Saturday',
+                'fasting_status' => 'Breacking Fast',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => 'Avocado toast with poached eggs',
+                'breakfast_time' => '8:00 AM',
+                'lunch_meal' => 'Grilled chicken Caesar salad with whole grain croutons',
+                'lunch_time' => '12:30 PM',
+                'dinner_meal' => 'Baked cod with roasted vegetables',
+                'dinner_time' => '6:30 PM',
+                'plan_id'=> 7
+            ],
+
+            [
+                'day' => 'Sunday',
+                'fasting_status' => 'Fasting 24 hour',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => '',
+                'breakfast_time' => '',
+                'lunch_meal' => '',
+                'lunch_time' => '',
+                'dinner_meal' => '',
+                'dinner_time' => '',
+                'plan_id'=> 7
+            ],
+            [
+                'day' => 'Monday',
+                'fasting_status' => 'Breaking Fast',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => 'Berry smoothie bowl',
+                'breakfast_time' => '8:00 AM',
+                'lunch_meal' => 'Turkey and hummus wrap with whole grain tortilla',
+                'lunch_time' => '12:30 PM',
+                'dinner_meal' => 'Vegetable stir-fry with tofu served over brown rice',
+                'dinner_time' => '6:30 PM',
+                'plan_id'=> 7 // plan_id
+            ],
+            [
+                'day' => 'Tuesday',
+                'fasting_status' => 'Fasting 24 hour',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => '',
+                'breakfast_time' => '',
+                'lunch_meal' => '',
+                'lunch_time' => '',
+                'dinner_meal' => '',
+                'dinner_time' => '',
+                'plan_id'=> 7  // plan_id
+            ],
+            [
+                'day' => 'Wednesday',
+                'fasting_status' => 'Breaking Fast',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => 'Oatmeal topped with sliced bananas and almonds',
+                'breakfast_time' => '8:00 AM',
+                'lunch_meal' => 'Lentil soup with a side of whole grain bread',
+                'lunch_time' => '12:30 PM',
+                'dinner_meal' => 'Grilled shrimp with roasted sweet potatoes and asparagus',
+                'dinner_time' => '6:30 PM',
+                'plan_id'=> 7  // plan_id
+            ],
+            [
+                'day' => 'Thursday',
+                'fasting_status' => 'Fasting 24 hour',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => '',
+                'breakfast_time' => '',
+                'lunch_meal' => '',
+                'lunch_time' => '',
+                'dinner_meal' => '',
+                'dinner_time' => '',
+                'plan_id'=> 7  // plan_id
+            ],
+            [
+                'day' => 'Friday',
+                'fasting_status' => 'Breaking Fast',
+                'quantity_of_Water' => 'At least 8 glasses (2 liters)',
+                'breakfast_meal' => 'Whole grain pancakes with berries and a drizzle of honey',
+                'breakfast_time' => '8:00 AM',
+                'lunch_meal' => 'Quinoa salad with chickpeas, cucumber, tomatoes, and feta cheese',
+                'lunch_time' => '12:30 PM',
+                'dinner_meal' => 'Grilled chicken breast with roasted vegetables and couscous',
+                'dinner_time' => '6:30 PM',
+                'plan_id'=> 7
+            ],
+            [
+                'day' => 'Saturday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Veggie scramble with whole grain toast',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Greek yogurt parfait',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Grilled salmon with roasted sweet potatoes',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Sunday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Overnight oats with mixed berries',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Avocado and black bean wrap with side salad',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Turkey chili with whole grain bread',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Monday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Quinoa and vegetable stir-fry',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Cottage cheese with sliced peaches',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Grilled tofu with brown rice and steamed vegetables',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Tuesday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Spinach and feta omelette',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Hummus with carrot sticks',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Grilled shrimp with quinoa salad',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Wednesday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Whole grain pancakes with fruit',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'ATeriyaki chicken with roasted sweet potatoes and green beans',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Tuna salad with mixed greens and whole grain bread',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Thursday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Whole grain pasta with marinara sauce and vegetables',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Greek yogurt with honey and walnuts',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Grilled steak with roasted potatoes and asparagus',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
+            ],
+            [
+                'day' => 'Friday',
+                'fasting_status' => '8:00 PM - 12:00 PM',
+                'quantity_of_Water' => 'At least 2 liters',
+                'breakfast_meal' => 'Veggie omelette with whole grain toast',
+                'breakfast_time' => '12:00 PM',
+                'lunch_meal' => 'Sliced cucumber with hummus',
+                'lunch_time' => '3:00 PM',
+                'dinner_meal' => 'Baked chicken with quinoa and sautéed spinach',
+                'dinner_time' => '6:00 PM',
+                'plan_id' => 8
             ],
         ];
         foreach ($meals as $meal) {

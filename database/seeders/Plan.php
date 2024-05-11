@@ -13,35 +13,45 @@ class Plan extends Seeder
         DB::table('plans')->delete();
         $plans = [
             [
-                'name' => 'Normal',
-                'age' => '18-24',
-                'fasting_system' =>'16/8 Method',
-            ],  //1
-            [
                 'name' => 'Difficult',
-                'age' => '18-24',
+                'age' => '18-25',
                 'fasting_system' =>'Alternate Day Fasting (ADF)',
+            ],//1
+            [
+                'name' => 'Normal',
+                'age' => '18-25',
+                'fasting_system' =>'16/8 Method',
             ],  //2
             [
-                'name' => 'Normal',
-                'age' => '25-40',
-                'fasting_system' =>'18/6 Method',
-            ],  //3
-            [
                 'name' => 'Difficult',
-                'age' => '25-40',
+                'age' => '26-35',
                 'fasting_system' =>'20/4 Method (Warrior Diet)',
+            ],//3
+            [
+                'name' => 'Normal',
+                'age' => '26-35',
+                'fasting_system' =>'18/6 Method',
             ],  //4
             [
-                'name' => 'Normal',
-                'age' => '40-61',
-                'fasting_system' =>'14/10 Method (Condensed Eating Window)',
+                'name' => 'Difficult',
+                'age' => '36-45',
+                'fasting_system' =>'24-Hour Fast (Once or Twice a Week)',
             ],  //5
             [
-                'name' => 'Difficult',
-                'age' => '40-61',
-                'fasting_system' =>'24-Hour Fast (Once or Twice a Week)',
+                'name' => 'Normal',
+                'age' => '36-45',
+                'fasting_system' =>'14/10 Method (Condensed Eating Window)',
             ],  //6
+            [
+                'name' => 'Difficult',
+                'age' => '+46',
+                'fasting_system' =>'Alternate Day Fasting (ADF)',
+            ],  //7
+            [
+                'name' => 'Normal',
+                'age' => '+46',
+                'fasting_system' =>'16/8 Method',
+            ],  //8
         ];
         foreach ($plans as $plan) {
             \App\Models\Plan::create($plan);

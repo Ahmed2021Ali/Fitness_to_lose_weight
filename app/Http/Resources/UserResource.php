@@ -18,6 +18,8 @@ class UserResource extends JsonResource
             'weight' => $this->weight,
             'diseases' => $this->diseases,
             'info' => InfoResource::collection($this->info),
+           'plan' => new PlanResource($this->plan),
+
         ];
     }
 }
