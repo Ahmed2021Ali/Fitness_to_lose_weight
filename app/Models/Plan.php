@@ -9,7 +9,7 @@ class Plan extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name','age','fasting_system'];
+    protected $fillable=['fasting_system','plan_overview'];
 
     public function user()
     {

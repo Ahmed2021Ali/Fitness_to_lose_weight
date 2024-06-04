@@ -84,10 +84,15 @@ class Answer extends Seeder
             ['answer' => '1-2 times', 'question_id' => '19'],
             ['answer' => '3-4 times', 'question_id' => '19'],
             ['answer' => '5 and more', 'question_id' => '19'],
-
-
-
-        ];        foreach ($answers as $answer) {
+            ['answer' => '1.2(sedentary)', 'question_id' => '20'],
+            ['answer' => '1.3(lightly active)', 'question_id' => '20'],
+            ['answer' => '1.5(moderately active)', 'question_id' => '20'],
+            ['answer' => '1.7(very active) ', 'question_id' => '20'],
+            ['answer' => '1.9(extra active) ', 'question_id' => '20'],
+            ['answer' => 'male', 'question_id' => '21'],
+            ['answer' => 'female', 'question_id' => '21'],
+        ];
+        foreach ($answers as $answer) {
             \App\Models\Answer::create($answer);
         }
     }

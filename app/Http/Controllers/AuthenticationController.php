@@ -8,7 +8,6 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 
 class AuthenticationController extends Controller
@@ -18,8 +17,7 @@ class AuthenticationController extends Controller
     {
         $user = User::create($request->validated());
         return response()->json(['status' => true, 'message' => 'User Created Successfully',
-            'token' => $user->createToken("User Token")->plainTextToken,
-            'user' => $user,
+            'token' => $user->createToken("User Token")->plainTextToken, 'user' => $user,
         ], 201);
     }
 

@@ -11,8 +11,7 @@ return new class extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('age');
+            $table->string('plan_overview');
             $table->string('fasting_system');
             $table->timestamps();
         });

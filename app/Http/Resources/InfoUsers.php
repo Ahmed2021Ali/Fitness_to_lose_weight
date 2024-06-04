@@ -13,10 +13,12 @@ class InfoUsers extends JsonResource
         return [
             'id' => $this->id,
             'age' => $this->age,
-            'height' => $this->height,
             'weight' => $this->weight,
-            'diseases' => $this->diseases,
+            'height' => $this->height,
+            'BMI' => ($this->weight / ($this->height ?? 1)) * ($this->height??1),
+            'BMR' => 88.362 + (13.197 * ($this->weight??1)) + (4.799 * ($this->height??1)) - (5.677 * $this->age),
             'info' => InfoResource::collection($this->info),
+
         ];
     }
 }

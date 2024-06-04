@@ -22,7 +22,6 @@ Route::controller(\App\Http\Controllers\AuthenticationController::class)->group(
         Route::delete('/delete', 'delete');
         Route::get('/getUser', 'getUser');
     });
-    // https://fast.alsafwa1.com/api/user/getUser
 });
 ///////////////////////////////////   End Authentication Route ///////////////////////////////////
 
@@ -38,7 +37,6 @@ Route::controller(\App\Http\Controllers\QuestionController::class)->group(functi
 
 ///////////////////////////////////  Info Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\InfoController::class)->group(function () {
-    // eng.Mohamed Samy
     Route::get('/showAllInfo', 'showAllInfo');
     Route::middleware('auth:sanctum')->prefix('info')->group(function () {
         Route::post('/store', 'store');
@@ -61,17 +59,11 @@ Route::controller(\App\Http\Controllers\UserController::class)->group(function (
 ///////////////////////////////////  Plan Route ///////////////////////////////////
 Route::controller(\App\Http\Controllers\PlanController::class)->group(function () {
     Route::middleware('auth:sanctum')->prefix('plans')->group(function () {
-       Route::get('/show', 'show');
+        Route::get('/show', 'show');
         Route::get('/store/{id}', 'store');
     });
 });
 ///////////////////////////////////   End Plan Route ///////////////////////////////////
 
 
-///////////////////////////////////  Process Route ///////////////////////////////////
-Route::controller(\App\Http\Controllers\ProcessController::class)->group(function () {
-    Route::middleware('auth:sanctum')->prefix('process')->group(function () {
 
-    });
-});
-///////////////////////////////////   End Process Route ///////////////////////////////////

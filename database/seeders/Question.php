@@ -32,6 +32,8 @@ class Question extends Seeder
             ['question' => 'When do you usually have your first meal?  '],
             ['question' => 'When do you usually have your last meal? '],
             ['question' => 'How often do you usually eat during the day? '],
+            ['question' => 'What is activity level?'],
+            ['question' => 'What’s your gender?'],
         ];
         foreach ($questions as $questions) {
             \App\Models\Question::create($questions);

@@ -11,29 +11,13 @@ class PlanController extends Controller
     public function show(Request $request)
     {
         $user = $request->user();
-        if (isset($user->info)) {
-            foreach ($user->info as $info) {
-                if ($info->question_id === 1) {
-                    if ($info->answer_id === 1) {
-                        $plans = Plan::where('age', '18-25')->get();
-                        return response()->json(['plans' => PlanResource::collection($plans)]);
-                    } elseif ($info->answer_id === 2) {
-                        $plans = Plan::where('age', '26-35')->get();
-                        return response()->json(['plans' => PlanResource::collection($plans)]);
-                    } elseif ($info->answer_id === 3) {
-                        $plans = Plan::where('age', '36-45')->get();
-                        return response()->json(['questions' => PlanResource::collection($plans)]);
-                    } elseif ($info->answer_id === 4) {
-                        $plans = Plan::where('age', '+46')->get();
-                        return response()->json(['questions' => PlanResource::collection($plans)]);
-                    } else {
-                        return response()->json(['plan' => 'There is no plan for this age group']);
-                    }
-                }
-            }
+        if ($user->height && $user->weight) {
+            return response()->json(['plans' => PlanResource::collection($this->BMI($user->weight, $user->height))]);
+        } else {
+            return response()->json(['message' => 'Enter Your Height OR Weight  and try again', 'user' => $user]);
         }
-        return response()->json(['message' => 'Age Not Found']);
     }
+
 
     public function store(Request $request, $id)
     {
@@ -41,10 +25,24 @@ class PlanController extends Controller
         if ($plan) {
             $user = $request->user();
             $user->update(['plan_id' => $plan->id]);
-            return response()->json(['status' => true, 'message' => 'The plan was saved for ' . $user->name, 'plan' => new PlanResource($plan)]);
+            return response()->json(['message' => 'The plan was saved for ' . $user->name, 'plan' => new PlanResource($plan)]);
         } else {
-            return response()->json(['status' => false, 'message' => 'The plan does not exist']);
+            return response()->json(['message' => 'The plan does not exist']);
         }
     }
+
+
+    public function BMI($weight, $height)
+    {
+        $BMI = ($weight / (($height / 100) * ($height / 100)));
+        if ($BMI < 18.5) {
+            return Plan::where('id', 3)->get();
+        } elseif ($BMI >= 18.5 && $BMI <= 24.9) {
+            return Plan::all();
+        } else {
+            return Plan::where('id', '!=', 3)->get();
+        }
+    }
+
 
 }

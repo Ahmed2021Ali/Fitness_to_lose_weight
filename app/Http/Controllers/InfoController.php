@@ -11,7 +11,6 @@ use App\Models\User;
 
 class InfoController extends Controller
 {
-    // اخر سوال المفروض يتسأل للمستخدم علشان احدد الحالة بناءا عليها, و علشان برضو اقولة في انتظار انشاء الخطة بتاعتك
     public function store(InfoRequest $request)
     {
         // Store weight , height  ,  status_info  for user

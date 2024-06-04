@@ -13,45 +13,21 @@ class Plan extends Seeder
         DB::table('plans')->delete();
         $plans = [
             [
-                'name' => 'Difficult',
-                'age' => '18-25',
-                'fasting_system' =>'Alternate Day Fasting (ADF)',
+                'fasting_system' =>'Alternate Day Fasting (ADF) (24-Hour Fast)',
+                'Plan_overview'=>' Alternate Day Fasting involves alternating between a day of eating normally and a day of fasting.',
             ],//1
             [
-                'name' => 'Normal',
-                'age' => '18-25',
+
                 'fasting_system' =>'16/8 Method',
+                'Plan_overview'=>'The 16/8 Method involves a daily fasting period of 16 hours, with an 8-hour eating window. ',
             ],  //2
             [
-                'name' => 'Difficult',
-                'age' => '26-35',
-                'fasting_system' =>'20/4 Method (Warrior Diet)',
-            ],//3
-            [
-                'name' => 'Normal',
-                'age' => '26-35',
-                'fasting_system' =>'18/6 Method',
-            ],  //4
-            [
-                'name' => 'Difficult',
-                'age' => '36-45',
-                'fasting_system' =>'24-Hour Fast (Once or Twice a Week)',
-            ],  //5
-            [
-                'name' => 'Normal',
-                'age' => '36-45',
-                'fasting_system' =>'14/10 Method (Condensed Eating Window)',
-            ],  //6
-            [
-                'name' => 'Difficult',
-                'age' => '+46',
-                'fasting_system' =>'Alternate Day Fasting (ADF)',
-            ],  //7
-            [
-                'name' => 'Normal',
-                'age' => '+46',
-                'fasting_system' =>'16/8 Method',
-            ],  //8
+
+                'fasting_system' =>'5:2 Method',
+                'plan_overview'=>'the 5:2 Method involves normal eating for five days of the week and fasting for 24 hours on the other two days',
+
+            ],  //3
+
         ];
         foreach ($plans as $plan) {
             \App\Models\Plan::create($plan);
